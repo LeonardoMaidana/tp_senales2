@@ -12,5 +12,7 @@ func count_new_instance():
 func _ready():
 	# Inicializa el texto de "CountLabel" usando el texto
 	# Constante "INSTANCES_TEXT" más el valor de "instancesCount" como Texto
+	$RedGenerator.connect("button_down", self, "count_new_instance")
+	$VioletGenerator.connect("button_down", self, "count_new_instance")
 	$CountLabel.text = INSTANCES_TEXT + String(instancesCount)
 	pass
